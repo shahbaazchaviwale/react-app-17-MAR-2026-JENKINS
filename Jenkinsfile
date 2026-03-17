@@ -15,19 +15,19 @@ pipeline {
 
   stage('Install Dependencies') {
    steps {
-    sh 'npm ci'
+    bat 'npm ci'
    }
   }
 
   stage('Run Tests') {
    steps {
-    sh 'npm test -- --watchAll=false'
+    bat 'npm test -- --watchAll=false'
    }
   }
 
   stage('Build') {
    steps {
-    sh 'npm run build'
+    bat 'npm run build'
    }
   }
 
